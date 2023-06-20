@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<%- include('./partials/header.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+
+            <div class="message">
+                <form method="post" action="/">
+                    <label for="title">Name</label>
+                    <input type="text" id="title" name="user" required>
+                    <label for="snippet">Message</label>
+                    <input type="text" id="snippet" name="text" required>
+                    <label for="date">Date</label>
+                    <input type="datetime-local" name="added" id="date">
+                    <button>Send Message</button>
+                </form>
+            </div>
+
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+    </html>

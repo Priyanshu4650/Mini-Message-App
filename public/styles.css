@@ -1,0 +1,32 @@
+footer {
+    margin: auto;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+}
+
+.messages {
+    margin: auto;
+    position: absolute;
+}
+
+.user {
+    color: red;
+    position: relative;
+    right: 0%;
+}
+
+.text {
+    color: blue;
+    position: relative;
+    left: 0%;
+}
+
+.time {
+    position: relative;
+    left: 0%;
+}
+
+a:hover{
+    cursor: pointer;
+}

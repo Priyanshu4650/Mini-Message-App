@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<%- include('./partials/header.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+
+            <div class="messages">
+                <h2>All Messages</h2>
+                <% if(messages.length> 0){ %>
+                    <% messages.forEach(message=> { %>
+                        <ol class="texts">
+                            <p class="user">
+                                <%= message.user %>
+                            </p>
+                            <h6 class="text">
+                                <%= message.text %>
+                            </h6>
+                            <p class="time">
+                                <%= message.added %>
+                            </p>
+                            <!-- <a class="delete" data-doc="<%= message._id %>">Delete</a> -->
+                        </ol>
+                        <% }) %>
+                            <% } else{ %>
+                                <h6>No Messages to display....</h6>
+                                <% } %>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+        <!-- <script>
+            const trashcan = document.querySelector('a.delete');
+    
+            trashcan.addEventListener('click', (e) => {
+                const endpoint = `/${trashcan.dataset.doc}`;
+    
+                fetch(endpoint, {
+                    method: 'DELETE',
+                })
+                    .then(response => response.json())
+                    .then(data => window.location.href = data.redirect)
+                    .catch(err => console.log(err));
+            });
+        </script> -->
+    </body>
+
+    </html>
